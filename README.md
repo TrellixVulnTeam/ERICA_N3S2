@@ -1,3 +1,9 @@
+# ERICA-colab
+
+The repo is fork from [thunlp/ERICA](https://github.com/thunlp/ERICA), and then change some wrong codes or adjust codes for using in colab or other online jupyter notebook like.
+
+Below is raw repo introduction about ERICA：
+
 # ERICA
 
 Source code and dataset for ACL2021 paper: "[ERICA: Improving Entity and Relation Understanding for Pre-trained Language Models via Contrastive Learning](https://arxiv.org/abs/2012.15022)".
