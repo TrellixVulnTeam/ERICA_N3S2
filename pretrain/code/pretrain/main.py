@@ -208,6 +208,7 @@ if __name__ == "__main__":
     parser.add_argument("--cased", type=float, default=0)
     
     parser.add_argument("--local_dir", dest="local_dir", type=str, default="", help="local file dir")
+    parser.add_argument("--dataset_dir", dest="dataset_dir", type=str, default="../../data/DOC", help="dataset dir dir")
 
     args = parser.parse_args()
     # print args
@@ -237,9 +238,9 @@ if __name__ == "__main__":
     if args.model == "DOC":
         print('preparing data')
         if args.debug == 0:
-            train_dataset = CP_R_Dataset("../../data/DOC", args)
+            train_dataset = CP_R_Dataset(arg.dataset_dir, args)
         elif args.debug == 1:
-            train_dataset = CP_R_Dataset("../../data/DOC", args)
+            train_dataset = CP_R_Dataset(arg.dataset_dir, args)
         model = CP_R(args).to(args.device)
     else:
         raise Exception("No such model! Please make sure that `model` takes the value in {MTB, CP}")
