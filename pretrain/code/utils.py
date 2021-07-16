@@ -23,22 +23,22 @@ class EntityMarker():
     """
     def __init__(self, args=None):
         if args.bert_model == 'bert':
-            if os.path.exists('***path_to_your_bert_tokenizer***'):
+            if os.path.exists(args.local_dir):
                 if args.cased == 0:
-                    load_path = '***path_to_your_bert_tokenizer_uncased***'
+                    load_path = args.local_dir + 'bert-base-uncased-pytorch_model.bin'
                 elif args.cased == 1:
-                    load_path = '***path_to_your_bert_tokenizer_cased***'
+                    load_path = args.local_dir + 'bert-base-cased-pytorch_model.bin'
             else:
                 if args.cased == 0:
-                    load_path = '***path_to_your_bert_tokenizer_uncased***'
+                    load_path = 'bert-base-uncased'
                 elif args.cased == 1:
-                    load_path = '***path_to_your_bert_tokenizer_cased***'
+                    load_path = 'bert-base-cased'
             self.tokenizer = BertTokenizer.from_pretrained(load_path)
         elif args.bert_model == 'roberta':
-            if os.path.exists('***path_to_your_roberta_tokenizer***'):
-                load_path = '***path_to_your_roberta_tokenizer***'
+            if os.path.exists(args.local_dir):
+                load_path = args.local_dir + 'roberta-base-pytorch_model.bin'
             else:
-                load_path = '***path_to_your_roberta_tokenizer***'
+                load_path = 'roberta-base'
             self.tokenizer = RobertaTokenizer.from_pretrained(load_path)
 
         self.h_pattern = re.compile("\* h \*")

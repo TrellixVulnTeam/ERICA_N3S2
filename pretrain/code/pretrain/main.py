@@ -206,6 +206,8 @@ if __name__ == "__main__":
     parser.add_argument("--pretraining_size", type=int, default=10)
     parser.add_argument("--ablation", type=float, default=0)
     parser.add_argument("--cased", type=float, default=0)
+    
+    parser.add_argument("--local_dir", type=str, default="path")
 
     args = parser.parse_args()
     # print args
@@ -235,7 +237,7 @@ if __name__ == "__main__":
     if args.model == "DOC":
         print('preparing data')
         if args.debug == 0:
-            train_dataset = CP_R_Dataset("../../data/DOC", args)
+            train_dataset = CP_R_Dataset("../../data/DOC/sampled_data", args)
         elif args.debug == 1:
             train_dataset = CP_R_Dataset("../../data/DOC", args)
         model = CP_R(args).to(args.device)
