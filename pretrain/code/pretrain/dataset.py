@@ -230,13 +230,15 @@ class CP_R_Dataset(data.Dataset):
                 else:
                     assert False
         elif self.args.debug == 1:
-            if self.args.bert_model == 'bert':
-                if self.args.cased == 0:
-                    train_data = json.load(open(os.path.join(self.path, "train_distant_debug.json"), 'r'))
-                elif self.args.cased == 1:
-                    train_data = json.load(open(os.path.join(self.path, "train_distant_cased_debug.json"), 'r'))
-            elif self.args.bert_model == 'roberta':
-                train_data = json.load(open(os.path.join(self.path, "train_distant_roberta_debug.json"), 'r'))
+            # no such sample dataset
+            # if self.args.bert_model == 'bert':
+            #     if self.args.cased == 0:
+            #         train_data = json.load(open(os.path.join(self.path, "sampled_data/train_distant_debug.json"), 'r'))
+            #     elif self.args.cased == 1:
+            #         train_data = json.load(open(os.path.join(self.path, "train_distant_cased_debug.json"), 'r'))
+            # elif self.args.bert_model == 'roberta':
+            #     train_data = json.load(open(os.path.join(self.path, "train_distant_roberta_debug.json"), 'r'))
+            train_data = json.load(open(os.path.join(self.path, "sampled_data/train_distant_debug.json"), 'r'))
 
         random.shuffle(train_data)
         self.half_data_len = int(0.5 * len(train_data))
