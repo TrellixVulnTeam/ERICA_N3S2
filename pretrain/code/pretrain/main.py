@@ -237,9 +237,9 @@ if __name__ == "__main__":
     if args.model == "DOC":
         print('preparing data')
         if args.debug == 0:
-            train_dataset = CP_R_Dataset("../../data/DOC/sampled_data", args)
-        elif args.debug == 1:
             train_dataset = CP_R_Dataset("../../data/DOC", args)
+        elif args.debug == 1:
+            train_dataset = CP_R_Dataset("../../data/DOC/sampled_data", args)
         model = CP_R(args).to(args.device)
     else:
         raise Exception("No such model! Please make sure that `model` takes the value in {MTB, CP}")
