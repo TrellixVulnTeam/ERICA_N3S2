@@ -1,6 +1,7 @@
 # ERICA-colab
 
-The repo is fork from [thunlp/ERICA](https://github.com/thunlp/ERICA), and then change some wrong codes or adjust codes for using in colab or other online jupyter notebook like.
+The repo is forked from [thunlp/ERICA](https://github.com/thunlp/ERICA), and then change some wrong codes and adjust codes for using in google colab and other online jupyter notebook.
+
 
 Below is raw repo introduction about ERICA：
 
