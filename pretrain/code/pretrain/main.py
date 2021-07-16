@@ -207,7 +207,7 @@ if __name__ == "__main__":
     parser.add_argument("--ablation", type=float, default=0)
     parser.add_argument("--cased", type=float, default=0)
     
-    parser.add_argument("--local_dir", type=str, default="path")
+    parser.add_argument("--local_dir", dest="local_dir", type=str, default="", help="local file dir")
 
     args = parser.parse_args()
     # print args
