@@ -2,6 +2,7 @@
 
 The repo is forked from [thunlp/ERICA](https://github.com/thunlp/ERICA), and then change some wrong codes and adjust codes for using in [google colab](https://colab.research.google.com/drive/1x0ZQF8KZqSczzLCEt3xXkbpWLWmzOgBW?usp=sharing) and other online jupyter notebook.
 
+And this is my blog about ERICA: [ERICA-提升预训练语言模型实体与关系理解的统一框架解读](https://www.asteriscum.cn/2021/07/17/31/59/)
 
 Below is raw repo introduction about ERICA：
 
